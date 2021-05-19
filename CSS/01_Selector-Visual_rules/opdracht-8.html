@@ -1,0 +1,44 @@
+<!-- Leg in eigen woorden uit wat met cascade en inheritance wordt bedoeld. Maak
+voorbeelden om je antwoord uit te leggen. -->
+
+Met cascade word er bedoel dat als er twee evenwaardige selecotrs zijn de
+laatste waarde toegepast word op de styling. Voorbeeld:
+
+<style>
+  h1 {
+    color: red;
+  }
+  h1 {
+    color: blue;
+  }
+</style>
+
+<h1>This is my heading.</h1>
+
+In dit voorbeeld zijn er in de styling 2 selectors die wat betreft specifity
+gelijk aan elkaar zijn. In dit geval word altijd de laatst gedeclareerde styling
+toegepast. Met inheritance word bedoeld dat op elementen toegepaste styling
+worden geerfd door de nakomelingen (descendants) van de elementen waarop de
+styling is toegepast. Als er een styling is toegepast op de body element
+bijvoorbeeld de kleur blauw. Dan zal elke element die voorkomt in de body
+element een blauwe kleur krijgen. voorbeeld:
+
+<style>
+  body {
+    color: blue;
+  }
+
+  span {
+    color: black;
+  }
+</style>
+
+<p>
+  As the body has been set to have a color of blue this is inherited through the
+  descendants.
+</p>
+<p>
+  We can change the color by targetting the element with a selector, such as
+  this <span>span</span>.
+</p>
+.

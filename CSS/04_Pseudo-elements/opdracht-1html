@@ -1,0 +1,10 @@
+Kun je enkele voorbeelden geven van pseudo-elementen (minimaal 4)? Beschrijf met
+je eigen woorden wat deze pseudo-elementen inhouden. 1.first-line pseudo-element
+Met dit pseudo-element kun je speciale styling toepassen op de eerste lijn tekst
+van een tekst blok. Dit pseudo-element kan alleen worden toegepast op block
+elementen. 2.first-letter pseudo-element Met dit pseudo-element kun je speciale
+styling toepassen op de eerste letter van een tekst.Dit pseudo-element kan
+alleen worden toegepast op block elementen. 3. before pseudo-element Met dit
+pseudo-element kun je content toevoegen voor de content van het html element. 4.
+after pseudo-element Met dit pseudo-element kun je content toevoegen na de
+content van het html element.

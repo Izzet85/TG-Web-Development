@@ -1,0 +1,278 @@
+<!-- De property ‘align-items’ is een property die door flex gebruikt wordt. Maak verschillende voorbeelden door gebruik te maken van de align-items property.
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      .container1 {
+        margin: 0;
+        height: 800px;
+        border: 10px solid black;
+        display: flex;
+
+        justify-content: center;
+        align-items: center;
+        background: yellow;
+        padding-right: 0px;
+        /* flex-wrap: wrap; */
+
+        margin-bottom: 30px;
+      }
+      .container2 {
+        border: 10px solid black;
+        height: 800px;
+        display: flex;
+
+        justify-content: space-between;
+        align-items: flex-start;
+        background: yellow;
+        padding-right: 0px;
+        margin-bottom: 30px;
+
+        flex-wrap: wrap;
+      }
+
+      .container3 {
+        border: 10px solid black;
+        height: 800px;
+        align-items: flex-end;
+        display: flex;
+
+        justify-content: space-around;
+        background: yellow;
+        padding-right: 0px;
+        margin-bottom: 30px;
+        flex-wrap: wrap;
+      }
+      .container4 {
+        border: 10px solid black;
+        height: 800px;
+        display: flex;
+        align-items: baseline;
+
+        justify-content: space-evenly;
+        background: yellow;
+        padding-right: 0px;
+        margin-bottom: 30px;
+        flex-wrap: wrap;
+      }
+      .container5 {
+        border: 10px solid black;
+        height: 800px;
+        display: flex;
+
+        justify-content: flex-start;
+        background: yellow;
+        padding-right: 0px;
+        margin-bottom: 30px;
+        flex-wrap: wrap;
+      }
+      .container6 {
+        border: 10px solid black;
+        height: 800px;
+        display: flex;
+
+        justify-content: flex-end;
+        background: yellow;
+        padding-right: 0px;
+        margin-bottom: 30px;
+        flex-wrap: wrap;
+      }
+
+      h1 {
+        margin-left: 35px;
+      }
+
+      .container4 .blok1 h1 {
+        margin-top: 50px;
+      }
+      .container4 .blok2 h1 {
+        margin-left: 70px;
+        margin-top: 25px;
+      }
+      .container4 .blok3 h1 {
+        margin-right: 50px;
+        margin-top: 70px;
+      }
+      .container4 .blok4 h1 {
+        margin-top: 50px;
+      }
+      .blok1 {
+        width: 100px;
+        height: 100px;
+        background-color: turquoise;
+        margin-right: 30px;
+        margin: 20px;
+      }
+      .blok2 {
+        width: 100px;
+        height: 100px;
+        background-color: turquoise;
+        margin-right: 30px;
+        margin: 20px;
+      }
+      .blok3 {
+        width: 100px;
+        height: 100px;
+        background-color: turquoise;
+        margin-right: 30px;
+        margin: 20px;
+      }
+
+      .blok4 {
+        width: 100px;
+        height: 100px;
+        background-color: turquoise;
+        margin-right: 30px;
+        margin: 20px;
+      }
+      .blok5 {
+        width: 100px;
+        height: 100px;
+        background-color: turquoise;
+        margin-right: 30px;
+        margin: 20px;
+      }
+      .blok6 {
+        width: 100px;
+        height: 100px;
+        background-color: turquoise;
+        margin-right: 30px;
+        margin: 20px;
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>align items: center</h1>
+    <div class="container1">
+      <div class="blok1">
+        <h1>1</h1>
+      </div>
+      <div class="blok2">
+        <h1>2</h1>
+      </div>
+      <div class="blok3">
+        <h1>3</h1>
+      </div>
+      <div class="blok4">
+        <h1>4</h1>
+      </div>
+      <div class="blok5">
+        <h1>5</h1>
+      </div>
+      <div class="blok6">
+        <h1>6</h1>
+      </div>
+    </div>
+    <h1>align items: flex-start</h1>
+    <div class="container2">
+      <div class="blok1">
+        <h1>1</h1>
+      </div>
+      <div class="blok2">
+        <h1>2</h1>
+      </div>
+      <div class="blok3">
+        <h1>3</h1>
+      </div>
+      <div class="blok4">
+        <h1>4</h1>
+      </div>
+      <div class="blok5">
+        <h1>5</h1>
+      </div>
+      <div class="blok6">
+        <h1>6</h1>
+      </div>
+    </div>
+    <h1>align-items: flex-end</h1>
+    <div class="container3">
+      <div class="blok1">
+        <h1>1</h1>
+      </div>
+      <div class="blok2">
+        <h1>2</h1>
+      </div>
+      <div class="blok3">
+        <h1>3</h1>
+      </div>
+      <div class="blok4">
+        <h1>4</h1>
+      </div>
+      <div class="blok5">
+        <h1>5</h1>
+      </div>
+      <div class="blok6">
+        <h1>6</h1>
+      </div>
+    </div>
+    <h1>align-items: baseline</h1>
+    <div class="container4">
+      <div class="blok1">
+        <h1>A</h1>
+      </div>
+      <div class="blok2">
+        <h1>B</h1>
+      </div>
+      <div class="blok3">
+        <h1>C</h1>
+      </div>
+      <div class="blok4">
+        <h1>D</h1>
+      </div>
+      <div class="blok5">
+        <h1>E</h1>
+      </div>
+      <div class="blok6">
+        <h1>F</h1>
+      </div>
+    </div>
+    <!-- <h1>justify-content: start</h1>
+    <div class="container5">
+      <div class="blok1">
+        <h1>1</h1>
+      </div>
+      <div class="blok2">
+        <h1>2</h1>
+      </div>
+      <div class="blok3">
+        <h1>3</h1>
+      </div>
+      <div class="blok4">
+        <h1>4</h1>
+      </div>
+      <div class="blok5">
+        <h1>5</h1>
+      </div>
+      <div class="blok6">
+        <h1>6</h1>
+      </div>
+    </div>
+    <h1>justify-content: end</h1>
+    <div class="container6">
+      <div class="blok1">
+        <h1>1</h1>
+      </div>
+      <div class="blok2">
+        <h1>2</h1>
+      </div>
+      <div class="blok3">
+        <h1>3</h1>
+      </div>
+      <div class="blok4">
+        <h1>4</h1>
+      </div>
+      <div class="blok5">
+        <h1>5</h1>
+      </div>
+      <div class="blok6">
+        <h1>6</h1>
+      </div>
+    </div> -->
+  </body>
+</html>

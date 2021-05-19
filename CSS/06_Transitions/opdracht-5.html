@@ -1,0 +1,68 @@
+<!-- Hieronder zie je wederom een voorbeeld van een transition. Je kunt op verschillende properties transitions aangeven. Zoek uit op welke properties de transitions zitten en maak het na. Je eigen creativiteit gebruiken is uiteraard toegestaan. -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      .picture {
+        animation-direction: alternate;
+      }
+      img {
+        top: 0px;
+        right: 0px;
+        border: solid black 10px;
+        position: relative;
+      }
+      .closing-card {
+        top: 18px;
+        left: 18px;
+        width: 200px;
+        height: 200px;
+        background-color: pink;
+        /* transform: translate(10px, -214px); */
+        position: absolute;
+        transition-property: transform 5sec;
+        transition-timing-function: ease-in;
+      }
+      .closing-card:hover {
+        transform: translate(150px, 150px);
+        transform: rotate(45deg);
+        top: 100px;
+        left: 200px;
+      }
+      @keyframes myfirst {
+        0% {
+          left: 0px;
+          top: 0px;
+        }
+
+        50% {
+          left: 200px;
+          top: 200px;
+        }
+
+        100% {
+          left: 0px;
+          top: 0px;
+        }
+      }
+    </style>
+
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="picture">
+      <img
+        width="200px"
+        height="200px"
+        src="https://www.feestwinkel.nl/media/catalog/product/cache/da6397f48c0de83848e2b5941bc21d12/2/4/24810-01a.jpg"
+        alt=""
+      />
+    </div>
+
+    <div class="closing-card"></div>
+  </body>
+</html>

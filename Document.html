@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<!-- saved from url=(0056)http://127.0.0.1:5500/04_Pseudo-elements/opdracht-7.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      .container {
+        position: relative;
+        top: 50px;
+        left: 50px;
+      }
+      .blok1 {
+        width: 150px;
+        height: 150px;
+        position: relative;
+        background-color: red;
+        transform: rotate(100deg);
+        position: absolute;
+      }
+
+      .blok1::after {
+        width: 100px;
+        height: 100px;
+        position: relative;
+        background-color: red;
+      }
+      .blok2 {
+        width: 150px;
+        height: 150px;
+        position: relative;
+        background-color: red;
+        transform: rotate(140deg);
+        position: absolute;
+      }
+
+      .blok2::after {
+        width: 100px;
+        height: 100px;
+        position: relative;
+        background-color: red;
+      }
+      .blok3 {
+        width: 150px;
+        height: 150px;
+        position: relative;
+        background-color: red;
+        transform: rotate(160deg);
+      }
+
+      .blok3::after {
+        width: 100px;
+        height: 100px;
+        position: relative;
+        background-color: red;
+      }
+    </style>
+    <title>Document</title>
+  <style type="text/css">.jqstooltip { position: absolute;left: 0px;top: 0px;visibility: hidden;background: rgb(0, 0, 0) transparent;background-color: rgba(0,0,0,0.6);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";color: white;font: 10px arial, san serif;text-align: left;white-space: nowrap;padding: 5px;border: 1px solid white;box-sizing: content-box;z-index: 10000;}.jqsfield { color: white;font: 10px arial, san serif;text-align: left;}</style></head>
+  <body>
+    <div class="container">
+      <div class="blok1"></div>
+      <div class="blok2"></div>
+      <div class="blok3"></div>
+    </div>
+  <!-- Code injected by live-server -->
+<script type="text/javascript">
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+<div id="h10-modal"></div><div id="h10-xray"></div><div id="h10-asin-grabber"></div><div id="h10-demand"></div></body></html>

@@ -1,0 +1,90 @@
+<!-- Je kunt op verschillende properties transitions aangeven. Zie hieronder een voorbeeld. Zoek uit op welke properties de transitions zitten en maak het ongeveer hetzelfde na. -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      .container {
+        top: 200px;
+        left: 200px;
+        width: 800px;
+        height: 800px;
+        border-style: solid black 10px;
+        position: relative;
+      }
+
+      .box {
+        width: 100px;
+        height: 100px;
+        border-style: solid;
+        transition: translate 2000ms;
+        /* transition property */
+        transition-property: transform;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .container:hover .one {
+        background-color: red;
+        top: 30px;
+        transform: translate(900px, 100px);
+      }
+      .container:hover .two {
+        background-color: red;
+        transform: translateX(-500px);
+      }
+      .container:hover .three {
+        background-color: red;
+        transform: translate(0px, 400px);
+      }
+
+      .one {
+        background: white;
+
+        animation: move-in 2s steps(2);
+        transition-timing-function: linear;
+        transform: translate(500px, 250px);
+
+        position: absolute;
+        /* margin-bottom: 100px; */
+        /* transition: height 1s; */
+      }
+
+      .two {
+        background: white;
+        transition-timing-function: linear;
+        transform: translate(300px, 145px);
+        position: absolute;
+      }
+
+      .three {
+        background: white;
+        transition-timing-function: ease-out;
+        transform: translate(200px, 37px);
+        position: absolute;
+      }
+
+      @keyframes mymove {
+        0% {
+          bottom: 100px;
+        }
+
+        100% {
+          transform: translate(900px, -200px);
+        }
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box one">linear</div>
+      <div class="box two">ease-in</div>
+      <div class="box three">ease-out</div>
+    </div>
+  </body>
+</html>

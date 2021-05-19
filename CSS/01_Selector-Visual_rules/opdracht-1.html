@@ -1,0 +1,31 @@
+Je kunt op 3 verschillende manieren CSS in je HTML inladen. Op welke 3 manieren
+kun je dat doen? Leg ook voor elke wijze uit wat het precies inhoud. Er zijn 3
+manieren om css in je html in te laden, dat zijn: 1. External CSS Dit houd in
+dat de desbetreffende html pagina gestyled word op een aparte pagina die altijd
+een .css extensie heeft bijvoorbeeld: style.css. Op de desbetreffende html
+pagina moet er een link komen te staan met een referentie naar de css pagina
+zodat de styling toegepast wordt op de html pagina. Een link naar de css pagina
+zier er zo uit: <link rel="stylesheet" href="mystyle.css" />
+<div class=""></div>
+2. Internal CSS Bij een een internal CSS staat de styline van de html op de
+desbetreffende html pagina bijvoorbeeld :
+<html>
+  <head>
+    <style>
+      body {
+        background-color: linen;
+      }
+
+      h1 {
+        color: maroon;
+        margin-left: 40px;
+      }
+    </style>
+  </head>
+  Deze wijze van CSS word toegepast als een individuele html pagina moet
+  voorzien worden van unieke css styling. 3.Inline CSS Bij een Inline css word
+  een specifiek element gestyled. De styleing wordt gedaan door atributen toe te
+  voegen op de elementen bijvoorbeeld:
+  <h1 style="color: blue; text-align: center">This is a heading</h1>
+  .
+</html>

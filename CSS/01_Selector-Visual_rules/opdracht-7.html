@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      div p {
+        color: blue;
+      }
+      div > h1 {
+        color: red;
+      }
+      div + p {
+        color: darkgreen;
+      }
+
+      section ~ h1 {
+        background-color: blue;
+      }
+      #geel {
+        color: yellow;
+      }
+
+      .grijs {
+        background-color: grey;
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <p>Op dit tekst is d.m.v sibling selector</p>
+      <h1>
+        Op dit tekst is door middel van een id selector een gele kleur toegepast
+      </h1>
+      <h1>h1 heading</h1>
+      <h1>rood</h1>
+      <h2></h2>
+
+      <p></p>
+      <p></p>
+    </div>
+
+    <section>
+      <h1 class="grijs">
+        Dit tekst is gestyled door middel van een class atribute
+      </h1>
+      <h1>dit is een h1 heading</h1>
+    </section>
+  </body>
+</html>
+
+<!-- Maak nu een html bestand aan met voorbeelden van alle soorten selectors erin. Maak een link in je antwoord die naar dat html bestand verwijst.  -->

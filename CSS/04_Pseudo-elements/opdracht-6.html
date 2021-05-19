@@ -1,0 +1,95 @@
+<!-- Hieronder vind je wederom een voorbeeld van het gebruik van een pseudo-element. Kun jij dit namaken? -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      .container {
+        display: flex;
+        justify-content: space-evenly;
+      }
+
+      .one {
+        width: 100px;
+        height: 100px;
+        position: relative;
+        background-color: black;
+      }
+      .two {
+        width: 100px;
+        height: 100px;
+        position: relative;
+        background-color: black;
+      }
+      .three {
+        width: 100px;
+        height: 100px;
+        position: relative;
+        background-color: black;
+      }
+      .one::before {
+        content: '1';
+
+        font-size: 35px;
+        position: absolute;
+        left: 40px;
+        top: 40px;
+
+        color: white;
+      }
+      .one::after {
+        content: '.';
+        position: absolute;
+        color: white;
+        font-size: 40px;
+        bottom: 70px;
+        top: 15px;
+      }
+      .two::before {
+        content: '2';
+        font-size: 35px;
+        position: absolute;
+        color: white;
+        left: 40px;
+        top: 40px;
+      }
+      .two::after {
+        content: '.';
+        position: absolute;
+        color: white;
+        font-size: 40px;
+        bottom: 70px;
+        top: 15px;
+      }
+      .three::before {
+        content: '3';
+        font-size: 35px;
+        position: absolute;
+        color: white;
+        left: 40px;
+        top: 40px;
+      }
+      .three::after {
+        content: '.';
+        position: absolute;
+        color: white;
+        font-size: 40px;
+        bottom: 70px;
+        top: 15px;
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="one"></div>
+
+      <div class="two"></div>
+
+      <div class="three"></div>
+    </div>
+  </body>
+</html>
