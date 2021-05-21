@@ -1,38 +1,290 @@
 <!-- Zo! Je bent aan het eind van de CSS opdrachten gekomen. Nu ben je dus een volwaardig CSS baas. Jouw nieuw verworven skills moeten we natuurlijk nog wel goed testen. Hieronder hebben we wat leuke opdrachten bedacht die jij gaat maken. Laten we eens kijken hoe ver je komt. -->
 
-
 <!DOCTYPE html>
 <html lang="en">
-<head>
- <meta charset="UTF-8">
- <meta http-equiv="X-UA-Compatible" content="IE=edge">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>Document</title>
-</head>
-<body>
- <header>
-  <div class="header-text">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
+      rel="stylesheet"
+    />
 
-  </div>
+    <style>
+      main h1 {
+        text-align: center;
+        padding: 50px;
+        font-family: 'Lobster', cursive;
+      }
 
+      /* STYLIG HEADER */
+      header {
+        background-image: url(../assets/extra-opdrachten/Kopie\ van\ cooking.jpg);
+        background-size: 1300px;
+        object-fit: cover;
 
- </header>
- <main>
-  <h1>Populaire gerechten</h1>
-  <div class="container">
-   <div class="pasta1"></div>
-   <div class="pasta1"></div>
-   <div class="pasta1"></div>
-  </div>
+        padding: 100px 0 100px 0;
+      }
+      .header-text {
+        transform: translate(730px, -70px);
+      }
+      .header-text h1 {
+        color: blue;
+        font-family: 'Lobster', cursive;
 
- </main>
+        font-size: 50px;
+      }
+      .header-text p {
+        color: blue;
+        font-style: oblique;
+      }
+      .header-text p {
+        color: blue;
+        font-style: oblique;
+      }
+      .header-text .buy-btn {
+        color: blue;
+      }
+      .header-text .show-btn {
+        color: green;
+      }
+      /* STYLING POPULAIRE GERECHTEN SECTIE */
 
- <footer>
+      .container-populaire-gerechten {
+        display: flex;
+        justify-content: space-around;
+        margin-left: 50px;
+      }
+      .container-populaire-gerechten h1 {
+        font-family: 'Lobster', cursive;
+        font-size: 50px;
+      }
+      .pasta1 p {
+        width: 200px;
+        color: rgb(97, 135, 216), rgb(128, 179, 128);
+      }
 
-  <div>
-   
-  </div>
+      /* STYLING MENU SECTIE */
 
- </footer>
-</body>
+      .container-menu {
+        display: flex;
+        justify-content: space-between;
+      }
+      .container-menu article {
+        width: 250px;
+      }
+      .container-menu img{
+      transform: translateY(95px)
+      }
+
+      /*STYLING FOOTER  */
+
+      footer {
+        display: flex;
+        background-color: rgb(144, 255, 144);
+        color: blue;
+      }
+      .container-footer-tekst-blokken {
+        display: flex;
+        justify-content: space-between;
+        margin-left: 350px;
+        color: rgb(97, 135, 216), rgb(128, 179, 128);
+      }
+      .contact-textblok {
+        margin-left: 50px;
+        width: 150px;
+        padding-right: 200px;
+      }
+      .navigation-textblok {
+        margin-left: 30px;
+        width: 150px;
+      }
+
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <div class="header-text">
+        <h1>Cooking</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+        <button class="buy-btn">BUY</button>
+        <button class="show-btn">SHOW MORE</button>
+      </div>
+    </header>
+    <main>
+      <!-- POPULAIRE GERECHTEN SECTIE -->
+      <h1>Populaire gerechten</h1>
+      <div class="container-populaire-gerechten">
+        <div class="pasta1">
+          <img
+            width="200px"
+            height="200px"
+            src="../assets/extra-opdrachten/Kopie van dish1.jpg"
+            alt=""
+          />
+          <h3>Pasta</h3>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis
+            aliquam aperiam velit ex odio vero eaque maxime voluptas natus
+            corrupti?
+          </p>
+          <a href="">MORE</a>
+        </div>
+        <div class="pasta1">
+          <img
+            class="chef-img"
+            width="200px"
+            height="200px"
+            src="../assets/extra-opdrachten/Kopie van dish1.jpg"
+            alt=""
+          />
+          <h3>Pasta</h3>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis
+            aliquam aperiam velit ex odio vero eaque maxime voluptas natus
+            corrupti?
+          </p>
+          <a href="">MORE</a>
+        </div>
+        <div class="pasta1">
+          <img
+            width="200px"
+            height="200px"
+            src="../assets/extra-opdrachten/Kopie van dish1.jpg"
+            alt=""
+          />
+          <h3>Pasta</h3>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis
+            aliquam aperiam velit ex odio vero eaque maxime voluptas natus
+            corrupti?
+          </p>
+          <a href="">MORE</a>
+        </div>
+      </div>
+      <!-- EINDE POPULAIRE GERECHTEN SECTIE -->
+      <!-- START MENU SECTIE -->
+
+      <h1>Menu</h1>
+
+      <div class="container-menu">
+        <div>
+          <img src="../assets/extra-opdrachten/Kopie van chef1.webp" alt="" />
+        </div>
+        <div>
+          <article>
+            <h4>Pasta</h4>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Aspernatur, praesentium?
+            </p>
+          </article>
+          <article>
+            <h4>Pasta</h4>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Aspernatur, praesentium?
+            </p>
+          </article>
+          <article>
+            <h4>Pasta</h4>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Aspernatur, praesentium?
+            </p>
+          </article>
+          <article>
+            <h4>Pasta</h4>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Aspernatur, praesentium?
+            </p>
+          </article>
+        </div>
+        <div>
+          <article>
+            <h4>Pasta</h4>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Aspernatur, praesentium?
+            </p>
+          </article>
+          <article>
+            <h4>Pasta</h4>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Aspernatur, praesentium?
+            </p>
+          </article>
+          <article>
+            <h4>Pasta</h4>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Aspernatur, praesentium?
+            </p>
+          </article>
+          <article>
+            <h4>Pasta</h4>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Aspernatur, praesentium?
+            </p>
+          </article>
+        </div>
+        <div>
+          <article>
+            <h4>Pasta</h4>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Aspernatur, praesentium?
+            </p>
+          </article>
+          <article>
+            <h4>Pasta</h4>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Aspernatur, praesentium?
+            </p>
+          </article>
+          <article>
+            <h4>Pasta</h4>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Aspernatur, praesentium?
+            </p>
+          </article>
+          <article>
+            <h4>Pasta</h4>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Aspernatur, praesentium?
+            </p>
+          </article>
+        </div>
+      </div>
+    </main>
+    <!-- EINDE MENU SECTIE -->
+
+    <!-- START FOOTER SECTIE -->
+
+    <footer>
+      <div class="container-footer-tekst-blokken"></div>
+      <div class="contact-textblok">
+        <h6>Contact</h6>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, vel.
+        </p>
+      </div>
+      <div class="navigation-textblok">
+        <h6>navigation</h6>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem,
+          accusamus!
+        </p>
+      </div>
+    </footer>
+    <!-- EINDE FOOTER SECTIE -->
+  </body>
 </html>
