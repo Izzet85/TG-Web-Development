@@ -356,15 +356,14 @@ console.log(monthName)
 
 // E) Herschrijf dit als een Ternary Operator.
 
-// let x = 2
-
+// ternary-formule:
 // variable_name = (condition) ? value_if_true : value_if false;
 
-// var results = 0;
+let x = 6
 
-// var results = x <= 4 && x >= 0 ? x == 2 : x == 5
+var results = x <= 4 && x >= 0 ? (result = 2) : (result = 5)
 
-// console.log(results)
+console.log(results)
 
 // Functions - Opdrachten
 
@@ -388,46 +387,73 @@ getElement('opdracht4.1b')
 
 // D) Geef je functie een return waarde, bijvoorbeeld de parameter * 2. Maak vervolgens een nieuwe variabele “result”. Roep je functie op met een getal als parameter en wijs de return waarde toe aan “result”. Log de variabele daarna in je console.
 
-
-
-
- function withReturn(x) {
-  return x * 2;
+function withReturn(x) {
+  return x * 2
 }
- var results = withReturn(5)
-
+var results = withReturn(5)
 
 console.log(results)
 
 // Opdracht 4.2
-
 
 // Onderzoek de volgende DOM methodes en gebruik ze in een voorbeeld:
 // document.getElementsByClassName
 
 var elements = document.getElementsByClassName('btn')
 
-
 // document.getElementsByTagName
 
-var x = document.getElementsByTagName('INPUT')
+// var x = document.getElementsByTagName('INPUT')
 
 // document.querySelector
-element = document.querySelector(h1)
+// element = document.querySelector(h1)
 // document.querySelectorAll
-element = document.querySelectorAll(h3)
+// element = document.querySelectorAll(h3)
 // element.innerHTML
-document.getElementById('demo').innerHTML = 'Paragraph changed!'
+// document.getElementById('demo').innerHTML = 'Paragraph changed!'
 
 // element.innerText
-var x = document.getElementById('heading').innerText
-
+// var x = document.getElementById('heading').innerText
 
 // Bij opdracht 4.1c heb je een input als parameter meegegeven. Roep die functie nu aan met een oninput ipv onchange, en console.log() de parameter.value ipv de parameter. Zie je het verschil in beide gevallen?
 
-
-
 // Opdracht 4.3:
+// Maak een functie randomNumber() en verbindt die aan een button. Zorg dat de functie Math.random() in de console logt. Wat merk je op als je deze meerdere keren gebruikt?
+
+// Ik krijg elke keer een andere uitkomst
+
+function randomNumber(x) {
+  Math.floor(Math.random())
+}
+
+// Verander je functie nu dat hij een parameter x gebruikt, en zorg dat hij het volgende in je console logt: Math.floor(Math.random() * x). Test nu je functie met verschillende waardes voor x. Valt iets je op?
+// Ik krijg elke keer een andere uitkomst
+
+function randomNumber(x) {
+  return Math.floor(Math.random() * x)
+}
+
+console.log(randomNumber(6))
+
+// Er zijn nog 2 belangrijke Math methods die handig zijn om te kennen. Onderzoek wat Math.min() en Math.max() doen. Kan je van beide al een voorbeeld geven?
+
+// Math.max functie selecteert de grootste getal;
+
+console.log(Math.max(600, 50))  
+
+// Math.min functie selecteert de kleinste getal.
 
 
+console.log(Math.min(600, 50))     
+
+// Opdracht 4.4:
+
+
+// We eindigen deze oefeningen met een lastige:
+
+// Schrijf een functie waar je een naam aan mee kan geven. Laat de naam vergelijken met de namen van mensen in je groepje. Wanneer je functie de naam wel/niet herkent moet dat als boodschap teruggegeven worden.
+
+// Schrijf een 2e functie die de eerste functie aanroept, en vervolgens de teruggegeven boodschap in een div element op je pagina toont. Denk aan de DOM methods!
+
+// Schrijf nu het bovenstaande nogmaals, maar gebruik dit keer Arrow Functions. Als het niet overal lukt is dat niet erg! 
 
