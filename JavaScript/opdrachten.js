@@ -429,25 +429,23 @@ function randomNumber(x) {
 // Verander je functie nu dat hij een parameter x gebruikt, en zorg dat hij het volgende in je console logt: Math.floor(Math.random() * x). Test nu je functie met verschillende waardes voor x. Valt iets je op?
 // Ik krijg elke keer een andere uitkomst
 
-function randomNumber(x) {
-  return Math.floor(Math.random() * x)
+function randomNumber() {
+  return Math.floor(Math.random() * 5 + 1)
 }
 
-console.log(randomNumber(6))
+console.log(randomNumber())
 
 // Er zijn nog 2 belangrijke Math methods die handig zijn om te kennen. Onderzoek wat Math.min() en Math.max() doen. Kan je van beide al een voorbeeld geven?
 
 // Math.max functie selecteert de grootste getal;
 
-console.log(Math.max(600, 50))  
+console.log(Math.max(600, 50))
 
 // Math.min functie selecteert de kleinste getal.
 
-
-console.log(Math.min(600, 50))     
+console.log(Math.min(600, 50))
 
 // Opdracht 4.4:
-
 
 // We eindigen deze oefeningen met een lastige:
 
@@ -455,5 +453,118 @@ console.log(Math.min(600, 50))
 
 // Schrijf een 2e functie die de eerste functie aanroept, en vervolgens de teruggegeven boodschap in een div element op je pagina toont. Denk aan de DOM methods!
 
-// Schrijf nu het bovenstaande nogmaals, maar gebruik dit keer Arrow Functions. Als het niet overal lukt is dat niet erg! 
+// Schrijf nu het bovenstaande nogmaals, maar gebruik dit keer Arrow Functions. Als het niet overal lukt is dat niet erg!
 
+// var names = document.getElementById('names').value
+
+// document.getElementById('demo').innerHTML = x
+
+function compareStr(names) {
+  // naam  word verkregen door input element en opgeslagen in de names variabel
+
+  var names = document.getElementById('names').value
+
+  // namen die vooraf zijn opgeslagen in een ARRAY
+
+  const namesArray = ['izzet', 'chantalle', 'tunahan', 'frankie']
+
+  // methode om de namen te vegerlijken
+
+  let resultaat = namesArray.includes(names)
+
+  // code die de resultaat in de console en op de webpagina weergeeft
+  document.getElementById('showName').innerHTML = 'Naam komt  overeen!'
+
+  if (resultaat === true) {
+    return console.log('Naam komt overeen!')
+  }
+
+  // code die de resultaat in de console en op de webpagina weergeeft
+
+  document.getElementById('showName').innerHTML = 'Naam komt niet overeen!'
+
+  if (resultaat === false) {
+    return console.log('naam komt niet overeen!')
+  }
+}
+
+// showName()
+
+function showName() {
+  compareStr(result)
+
+  // if (resultaat) {
+  //   document.getElementById('showName').innerHTML = 'Naam komt  overeen!'
+  // }
+}
+
+//  C) Schrijf nu het bovenstaande nogmaals, maar gebruik dit keer Arrow Functions. Als het niet overal lukt is dat niet erg!
+
+compareStr = () => {
+  // naam  word verkregen door input element en opgeslagen in de names variabel
+
+  var names = document.getElementById('names').value
+
+  // namen die vooraf zijn opgeslagen in een ARRAY
+
+  const namesArray = ['izzet', 'chantalle', 'tunahan', 'frankie']
+
+  // methode om de namen te vegerlijken
+
+  let resultaat = namesArray.includes(names)
+  document.getElementById('showName').innerHTML = resultaat
+
+  // code die de resultaat in de console en op de webpagina weergeeft
+  document.getElementById('showName').innerHTML = 'Naam komt  overeen!'
+
+  if (resultaat === true) {
+    return console.log('Naam komt overeen!')
+  }
+
+  // code die de resultaat in de console en op de webpagina weergeeft
+
+  document.getElementById('showName').innerHTML = 'Naam komt niet overeen!'
+
+  if (resultaat === false) {
+    return console.log('naam komt niet overeen!')
+  }
+}
+
+showName = () => {
+  compareStr(result)
+}
+
+// Arrays & Loops - Opdrachten
+
+// Opdracht 5.1:
+
+// A)Maak een array met 1 t/m 10 in willekeurige volgorde en log dit.
+
+const cijfers = [1, 5, 6, 8, 10, 3, 2, 4, 7, 9]
+
+console.log(cijfers)
+
+// B) Maak een array met Appel, Aardbei en 3 andere fruitsoorten. Log dit.
+const fruit = ['appel', 'aardbei', 'peer', 'banaan', 'mango']
+
+console.log(fruit)
+
+// C)  Gebruik de indexwaarde om Appel en Aardbei in de console te loggen.
+
+// bepaling indexwaarde van appel
+
+console.log(fruit[0])
+
+// const indexAppel = fruit.indexOf('appel')
+
+// const indexAardbei = fruit.indexOf('aardbei')
+
+// bepaling indexwaarde van aardbei
+
+console.log(fruit[1])
+
+// Gebruik Math.random() en Math.floor() om een random indexwaarde van je array met getallen te selecteren. Gebruik dat getal vervolgens als index om een fruitsoort te selecteren en log dit.
+
+let randomNumberArray = Math.floor(Math.random() * 4 + 1)
+
+console.log(fruit[randomNumberArray])
