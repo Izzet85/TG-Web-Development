@@ -593,12 +593,67 @@ console.log(fruit)
 
 //  [fruit[0], fruit[1]] = [fruit[1], fruit[0]]
 
-var b = fruit['peer']
+// stap 1 fruit peer word tijdelijk in variabele b geparkeerd
+
+let b = fruit['peer']
+
+// stap 2  in index 0 waar eerder peer stond word fruit aardbei geplaatst
+
 fruit[0] = fruit['aardbei']
-fruit['aardbei'] = b
+
+// stap 3  in index 1 waar eerder aardbei stond word fruit peer geplaatst
+
+b = fruit['aardbei']
+
+// [(arr[0], arr[1])] = [arr[1], arr[0]]
 
 console.log(fruit)
 
-
-
 // const fruit = ['appel', 'aardbei', 'peer', 'banaan', 'mango']
+
+// Opdracht 5.2
+
+// Loop door het array heen en log de items 1 voor 1 in je console.
+
+// B) Doe nu hetzelfde met een for...in en een for...of loop
+
+const dutchSports = ['voetbal', 'Hockey', 'Schaatsen']
+
+// loop vanaf index 0 tot en met de totale lengte van de dutchSports array.
+
+for (let i = 0; i < dutchSports.length; i++) {
+  console.log(dutchSports[i])
+}
+
+// B) Doe nu hetzelfde met een for...in en een for...of loop
+let i = 0
+while (i < dutchSports.length) {
+  console.log(dutchSports[i])
+  i++
+}
+
+// C) Maak een for loop die van de getallen 1 t/m 20 de even getallen logt.
+
+for (let i = 0; i < 20; i++) {
+  if (i % 2 == 0) {
+    console.log(i)
+  }
+  for (let i = 0; i <= 10; i++) {
+    console.log(i)
+    for (let i = 0; i < 20; i++) {
+      if (i % 2 == 0) {
+        console.log(i)
+      }
+
+      // console.log(i)
+    }
+  }
+
+  for (let i = 0; i < 20; i + 3) {
+    console.log(i)
+  }
+
+  // console.log(i)
+}
+
+// Nu gaan we even oefenen met nested loops. Maak nu een for-loop aan die drie keer draait.
