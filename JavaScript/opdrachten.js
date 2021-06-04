@@ -509,7 +509,7 @@ compareStr = () => {
 
   const namesArray = ['izzet', 'chantalle', 'tunahan', 'frankie']
 
-  // methode om de namen te vegerlijken
+  // methode om de namen te vergelijken
 
   let resultaat = namesArray.includes(names)
   document.getElementById('showName').innerHTML = resultaat
@@ -565,6 +565,40 @@ console.log(fruit[1])
 
 // Gebruik Math.random() en Math.floor() om een random indexwaarde van je array met getallen te selecteren. Gebruik dat getal vervolgens als index om een fruitsoort te selecteren en log dit.
 
-let randomNumberArray = Math.floor(Math.random() * 4 + 1)
+let randomNumberArray = Math.floor(Math.random() * 9 + 1)
 
-console.log(fruit[randomNumberArray])
+console.log(cijfers[randomNumberArray])
+
+// E) Console log de length property van je fruitsoorten array.
+
+console.log(fruit.length)
+
+//  F)  Fix de vorige error met modulo en de lengte.
+
+// G) Verander “Appel” naar “Peer”
+
+// const fruit = ['appel', 'aardbei', 'peer', 'banaan', 'mango']
+
+fruit[0] = 'Peer'
+console.log(fruit)
+// H)Verwissel “Peer” en “Aardbei” van positie. Kan je dit ook al met/zonder Array method?
+
+// de variabel peer wordt tijdelijk opgeslagen
+// var temp = fruit[0]
+
+// fruit[0] == fruit['aardbei']
+// fruit['aardbei'] == temp
+
+//  [fruit[0], fruit[1]] = [fruit[1], fruit[0]]
+
+//  [fruit[0], fruit[1]] = [fruit[1], fruit[0]]
+
+var b = fruit['peer']
+fruit[0] = fruit['aardbei']
+fruit['aardbei'] = b
+
+console.log(fruit)
+
+
+
+// const fruit = ['appel', 'aardbei', 'peer', 'banaan', 'mango']
