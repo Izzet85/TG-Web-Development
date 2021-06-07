@@ -565,9 +565,18 @@ console.log(fruit[1])
 
 // Gebruik Math.random() en Math.floor() om een random indexwaarde van je array met getallen te selecteren. Gebruik dat getal vervolgens als index om een fruitsoort te selecteren en log dit.
 
-let randomNumberArray = Math.floor(Math.random() * 9 + 1)
+// code om een random cijfer van 1 t/m 10 te krijgen
+let randomNumberArray = Math.floor(Math.random() * 4 + 1)
 
 console.log(cijfers[randomNumberArray])
+
+// selectie random fruit in de array
+
+let indexFruit = fruit[randomNumberArray]
+
+//  console log random fruit
+
+console.log(indexFruit)
 
 // E) Console log de length property van je fruitsoorten array.
 
@@ -649,11 +658,99 @@ for (let i = 0; i < 20; i++) {
     }
   }
 
-  for (let i = 0; i < 20; i + 3) {
-    console.log(i)
-  }
+  // for (let i = 0; i < 20; i + 3) {
+  //   i = -1
+  //   console.log(i)
+  // }
 
   // console.log(i)
 }
 
 // Nu gaan we even oefenen met nested loops. Maak nu een for-loop aan die drie keer draait.
+
+// D) Maak daarbinnen een for-loop die 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 logt.
+
+// let cijferArray = ;
+
+// for (i = 0; i <= 10; i++) {
+//    i = -1
+//   console.log(i)
+
+// }
+
+// outer loop
+for (let i = 0; i < 20; i++) {
+  console.log(i)
+
+  //  1e inner loop
+  for (let i = 1; i <= 20; i++)
+    if (i % 2 == 0) {
+      console.log(i)
+    }
+  // 2e inner loop
+  for (let i = 1; i <= 20; i++)
+    if ((i += 3)) {
+      console.log(i)
+    }
+}
+
+// Nu maken we het iets lastiger. De Reeks van Fibonacci is een lijst met getallen waarbij elk getal een opsomming is van de vorige 2 getallen.
+
+// G) Begin met het array [0,1]. Maak vervolgens een loop die dit array vult met de eerste 50 getallen van de Reeks  van Fibonacci. Log dit array.
+
+// lege array aangemaakt waar de fibonacci reeks in komt te staan
+
+let Fibonacci = []
+
+// In de Fibonacci array wordt elk getal van de rij (behalve de eerste twee) gelijk aan de som van de twee voorgaande getallen.
+
+Fibonacci[0] = 1
+Fibonacci[1] = 2
+
+// De for loop draait vanaf de 2e index tot en met de 50e index
+for (let i = 2; i <= 50; i++) {
+  // formule om de de twee voorgaande getallen bij elkaar op te tellen.
+  Fibonacci[i] = Fibonacci[i - 2] + Fibonacci[i - 1]
+  // console log berekening fibonacci
+
+  console.log(
+    Fibonacci[i - 2] + ' + ' + Fibonacci[i - 1] + ' = ' + Fibonacci[i]
+  )
+
+  //  comsole log uitkomst berekening
+
+  console.log(Fibonacci[i])
+}
+
+// H) Bouw een loop die het gegeven array met bubblesort sorteert.
+
+// ongesorteerde array
+var bubbleArray = [2, 7, 5, 10, 4, 9, 3, 1, 8, 6]
+
+function bubbleSort(bubbleArray) {
+  // outer loop verantwoordelijk voor de iteration
+  for (var i = 0; i < bubbleArray.length; i++) {
+    // laatste element in de array hoeft niet gechecked te worden vandaar -1
+    for (var j = 0; j < bubbleArray.length - i - 1; j++) {
+      // chech of de eerste iteratie groter is dan de volgende iteratie
+      if (bubbleArray[j] > bubbleArray[j + 1]) {
+        // If the condition is true then swap them
+        var temp = bubbleArray[j]
+        bubbleArray[j] = bubbleArray[j + 1]
+        bubbleArray[j + 1] = temp
+      }
+    }
+  }
+  // Print the sorted array
+  console.log(bubbleArray)
+}
+
+bubbleSort(bubbleArray)
+
+
+
+
+
+// Opdracht 5.3:
+
+const dutchSports = ["Voetbal",'Hockey','Schaatsten'];
