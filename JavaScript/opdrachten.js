@@ -793,3 +793,62 @@ let sportsLength = [
 console.log(sportsLength)
 
 // Opdracht 5.4:
+
+// A) Gebruik Array.from() om er een nieuw array van te maken.
+
+var carBrands = Array.from(['mercedes', 'toyota', 'BMW', 'Renault'])
+
+console.log(carBrands)
+
+// Onderzoek de volgende array methods en maak voor elke een voorbeeld:
+
+// filter()
+
+// de filter functie heeft als parameter een functie om merken langer dan 5 tekens te filteren die worden vervolgens in de resultFilter variabele opgeslagen.
+const resultFilter = carBrands.filter((carBrands) => carBrands.length >= 6)
+
+// console log van automerken met meer dan 5 tekens
+console.log(resultFilter)
+
+const cijferLijst = [8, 5.5, 7, 10, 3, 1, 4, 6]
+console.log(cijferLijst)
+
+// find()
+// De find functie pakt de eerste gegeven uit de desbetreffende lijst die overeenkomt met de geleverde functie in de parameter.
+var resultFind = cijferLijst.find((cijferLijst) => cijferLijst > 8)
+console.log(resultFind)
+// some()
+
+// functie die checkt of er in de evenGetal een even getal is;
+const evenGetal = (item) => item % 2 === 0
+
+// some functie checkt of de evenGetal een waarde bevat als output true of false;
+console.log(cijferLijst.some(evenGetal))
+
+// every()
+
+// functie die checkt of een bepaald item onder of gelijk is aan 10.
+const isOnderEenBepaaldWaarde = (item) => item <=10
+
+// de every built in methode checkt of alle gegevens in de array cijferlijst via de isOnderEenBepaaldWaarde  een true krijgt.
+
+console.log(cijferLijst.every(isOnderEenBepaaldWaarde))
+
+// includes()
+
+// de include methode checkt of er in de cijferLijst array een bepaalde waarde voorkomt in dit geval is dat 5.5.
+console.log(cijferLijst.includes(5.5))   
+
+
+
+
+// Maak meerdere objects Pet met een naam en een soort. Maak een ander dier met elk van de 5 soorten constructor uit de voorbeelden en log deze in de console.Zie je een onverwachte property?
+for (let i=0; i < 1000;  i++) {
+    if (i % 3 == 0){
+console.log(i)
+    }
+    else if
+    (i % 5 == 0)
+{console.log(i)
+}
+}
