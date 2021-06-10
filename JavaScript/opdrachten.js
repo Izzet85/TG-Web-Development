@@ -1000,6 +1000,12 @@ const tienPerson = [
   }),
 ]
 
+tienPerson.sort(function (a, b) {
+  return a.age - b.age
+})
+
+console.log(tienPerson)
+
 // console.log(tienPerson[2].age);
 
 // var sortedArrayPerson = tienPerson.sort(function (a, b) {
@@ -1011,7 +1017,6 @@ const tienPerson = [
 
 // console.log(sortedArrayPerson)
 
-
 // Opdracht 6.2:
 
 // Maak een Club object dat het volgende bijhoudt:
@@ -1019,82 +1024,79 @@ const tienPerson = [
 // Type club
 // Aantal :Leden
 
+var Clubs =  [] 
 
 let Club1 = {
   naam: 'De Waaier',
   typeClub: 'Tennisclub',
   aantalLeden: 50,
-  contactInformatie : {
+  contactInformatie: {
     Adres: 'sumatrastraat 50',
     contactPersoon: 'Gerard over het Hek',
-    telefoonNummer:'06982354761',
-  }
+    telefoonNummer: '06982354761',
+  },
 }
 let Club2 = {
   naam: 'De Ruiter',
   typeClub: 'Paardenclub',
   aantalLeden: 33,
-  contactInformatie :{
+  contactInformatie: {
     Adres: 'javastraat 50',
     contactPersoon: 'Miep over het Hek',
-    telefoonNummer:'06982354761',
-  }
+    telefoonNummer: '06982354761',
+  },
 }
 let Club3 = {
   naam: 'De Voetballer',
   typeClub: 'Voetbalclub',
   aantalLeden: 23,
-  contactInformatie :{
+  contactInformatie: {
     Adres: 'flevostraat 50',
     contactPersoon: 'Karin over het Hek',
-    telefoonNummer:'06982354761',
-  }
+    telefoonNummer: '06982354761',
+  },
 }
 let Club4 = {
   naam: 'De hockey',
   typeClub: 'Hockeyclub',
   aantalLeden: 34,
-  contactInformatie :{
+  contactInformatie: {
     Adres: 'batjanstraat 50',
     contactPersoon: 'Miep over het Hek',
-    telefoonNummer:'0698354761',
-  }
+    telefoonNummer: '0698354761',
+  },
 }
 let Club5 = {
   naam: 'De basketbal',
   typeClub: 'Basketbalclub',
   aantalLeden: 15,
-  contactInformatie :{
+  contactInformatie: {
     Adres: 'bloemstraat 50',
     contactPersoon: 'Kees over het Hek',
-    telefoonNummer:'069823234761',
-
-  }
+    telefoonNummer: '069823234761',
+  },
 }
-
 
 // Maak een array met 5 verschillende Clubs aan. Itereer door het array heen en log voor elke Club de naam, het telefoonnummer en de contactpersoon.
 
-
-let clubs = [Club1,Club2,Club3,Club4,Club5]
+let clubs = [Club1, Club2, Club3, Club4, Club5]
 
 for (let i = 0; i < clubs.length; i++) {
-  const naam = clubs[i].naam;
+  const naam = clubs[i].naam
   const telefoonnummer = clubs[i].contactInformatie.telefoonNummer
   const contactpersoon = clubs[i].contactInformatie.contactPersoon
 
-    // console.log(naam)
-    // console.log(telefoonnummer)
-    // console.log(contactpersoon)
+  // console.log(naam)
+  // console.log(telefoonnummer)
+  // console.log(contactpersoon)
 
-    console.log(
-      'Wilt u meer informatie over de club ' +
-        naam +
-        ' dan kunt u gerust contact opnemen met ' +
-        contactpersoon +
-        ' via het telefoonnummer ' +
-        telefoonnummer +
-        '.'
-    )
-}; 
-
+  console.log(
+    'Wilt u meer informatie over de club ' +
+      naam +
+      ' dan kunt u gerust contact opnemen met ' +
+      contactpersoon +
+      ' via het telefoonnummer ' +
+      telefoonnummer +
+      '.'
+  )
+}
