@@ -828,7 +828,7 @@ console.log(cijferLijst.some(evenGetal))
 // every()
 
 // functie die checkt of een bepaald item onder of gelijk is aan 10.
-const isOnderEenBepaaldWaarde = (item) => item <=10
+const isOnderEenBepaaldWaarde = (item) => item <= 10
 
 // de every built in methode checkt of alle gegevens in de array cijferlijst via de isOnderEenBepaaldWaarde  een true krijgt.
 
@@ -837,18 +837,264 @@ console.log(cijferLijst.every(isOnderEenBepaaldWaarde))
 // includes()
 
 // de include methode checkt of er in de cijferLijst array een bepaalde waarde voorkomt in dit geval is dat 5.5.
-console.log(cijferLijst.includes(5.5))   
+console.log(cijferLijst.includes(5.5))
 
-
-
+// Opdracht 6.1:
 
 // Maak meerdere objects Pet met een naam en een soort. Maak een ander dier met elk van de 5 soorten constructor uit de voorbeelden en log deze in de console.Zie je een onverwachte property?
-for (let i=0; i < 1000;  i++) {
-    if (i % 3 == 0){
-console.log(i)
-    }
-    else if
-    (i % 5 == 0)
-{console.log(i)
+
+let Pet = {
+  naam: 'kees',
+  soort: 'kat',
 }
+let Pet1 = {
+  naam: 'Henk',
+  soort: 'hond',
 }
+let Pet2 = {
+  naam: 'klaas',
+  soort: 'konijn',
+}
+
+Pet.soort = 'huisdier'
+Pet.soort = 'huisdier'
+
+// De Object Constructor:
+
+//  let dierObjectConstr = new dierObjectConstr()
+
+// dierObjectConstr.name = 'Maarten'
+// dierObjectConstr.soort = 'Vis'
+
+// console.log(new dierObjectConstr())
+
+// De Literal Constructor:
+
+let dierLiterallyConstr = {
+  name: 'Klaas',
+  soort: 'Tijger',
+}
+
+console.log(dierLiterallyConstr)
+
+// De Function Constructor:
+
+function Dier(name, soort) {
+  this.name = name
+  this.soort = soort
+}
+
+let functionConstructed = new Dier('Jens', 'leeuw')
+
+// De Singleton Constructor:
+
+let dierSingleConstructed = new (function () {
+  ;(this.name = 'Miep'), (this.soort = 'Vogel')
+})()
+
+console.log(dierSingleConstructed)
+
+// De Class-based Constructor:
+
+class Dier1 {
+  constructor(name, soort) {
+    ;(this.name = 'Joop'), (this.soort = 'Puma')
+  }
+  functionNestedinClass() {
+    console.log('dit is een functie die nested is in een class object')
+  }
+}
+let classConstructed = new Dier('Joop', 'Puma')
+
+console.log(classConstructed)
+
+// B) Gebruik Object.create() om een Object aan te maken. Doe dit voor elke Pet die je in de vorige opdracht hebt gemaakt, en log ze in de console. Valt er iets op aan de prototype?
+
+// 1
+const dierLiterallyConstrObjectCreate = Object.create(dierLiterallyConstr)
+
+// de name waarde van de 'name' propertie wordt gewijzgd naar "Izzet"
+
+dierLiterallyConstrObjectCreate.name = 'Izzet'
+
+//  de soort 'property' word gezwijzgd naar "Mens"
+dierLiterallyConstrObjectCreate.soort = 'Mens'
+
+console.log(dierLiterallyConstrObjectCreate)
+
+// 2  // De Function Constructor:
+
+// Er word een object gecreeerd op basis van de Dier object die als prototype word gebruikt.
+
+const functionVoertuigCreateObject = Object.create(new Dier())
+
+// Op de n functionDier1CreateObject
+
+functionVoertuigCreateObject.name = 'Mercedes'
+functionVoertuigCreateObject.soort = 'auto'
+
+console.log(functionVoertuigCreateObject)
+
+// 3  dierSingleConstructed
+
+// Er word een object gecreeerd op basis van de Dier object die als prototype word gebruikt.
+
+const meubelCreateObject = Object.create(new Dier1())
+
+meubelCreateObject.name = 'tafel'
+meubelCreateObject.soort = 'meubel'
+
+console.log(meubelCreateObject)
+
+// 4  classConstructed
+
+const huisdierclassConstructed = Object.create(new Dier())
+
+huisdierclassConstructed.soort = 'hond'
+huisdierclassConstructed.name = 'klaas'
+
+console.log(huisdierclassConstructed)
+
+// Maak een array met 10 Person Objects, die een naam en leeftijd hebben. Gebruik vervolgens Array methods om je personen te sorteren op leeftijd.
+
+const tienPerson = [
+  (Person = {
+    name: 'Klaas',
+    age: 25,
+  }),
+  (Person = {
+    name: 'Tom',
+    age: 30,
+  }),
+  (Person = {
+    name: 'Kees',
+    age: 26,
+  }),
+  (Person = {
+    name: 'Linda',
+    age: 20,
+  }),
+  (Person = {
+    name: 'Marieke',
+    age: 29,
+  }),
+  (Person = {
+    name: 'Theo',
+    age: 33,
+  }),
+  (Person = {
+    name: 'Elisabeth',
+    age: 23,
+  }),
+  (Person = {
+    name: 'Tarik',
+    age: 26,
+  }),
+  (Person = {
+    name: 'Kerim',
+    age: 31,
+  }),
+  (Person = {
+    name: 'Melissa',
+    age: 32,
+  }),
+]
+
+// console.log(tienPerson[2].age);
+
+// var sortedArrayPerson = tienPerson.sort(function (a, b) {
+//   for (let i = 1; 1 < tienPerson.length; i++) {
+//     return a.tienPerson[i].age - b.tienPerson[i].age
+//   }
+//   console.log();
+// })
+
+// console.log(sortedArrayPerson)
+
+
+// Opdracht 6.2:
+
+// Maak een Club object dat het volgende bijhoudt:
+// Naam
+// Type club
+// Aantal :Leden
+
+
+let Club1 = {
+  naam: 'De Waaier',
+  typeClub: 'Tennisclub',
+  aantalLeden: 50,
+  contactInformatie : {
+    Adres: 'sumatrastraat 50',
+    contactPersoon: 'Gerard over het Hek',
+    telefoonNummer:'06982354761',
+  }
+}
+let Club2 = {
+  naam: 'De Ruiter',
+  typeClub: 'Paardenclub',
+  aantalLeden: 33,
+  contactInformatie :{
+    Adres: 'javastraat 50',
+    contactPersoon: 'Miep over het Hek',
+    telefoonNummer:'06982354761',
+  }
+}
+let Club3 = {
+  naam: 'De Voetballer',
+  typeClub: 'Voetbalclub',
+  aantalLeden: 23,
+  contactInformatie :{
+    Adres: 'flevostraat 50',
+    contactPersoon: 'Karin over het Hek',
+    telefoonNummer:'06982354761',
+  }
+}
+let Club4 = {
+  naam: 'De hockey',
+  typeClub: 'Hockeyclub',
+  aantalLeden: 34,
+  contactInformatie :{
+    Adres: 'batjanstraat 50',
+    contactPersoon: 'Miep over het Hek',
+    telefoonNummer:'0698354761',
+  }
+}
+let Club5 = {
+  naam: 'De basketbal',
+  typeClub: 'Basketbalclub',
+  aantalLeden: 15,
+  contactInformatie :{
+    Adres: 'bloemstraat 50',
+    contactPersoon: 'Kees over het Hek',
+    telefoonNummer:'069823234761',
+
+  }
+}
+
+
+// Maak een array met 5 verschillende Clubs aan. Itereer door het array heen en log voor elke Club de naam, het telefoonnummer en de contactpersoon.
+
+
+let clubs = [Club1,Club2,Club3,Club4,Club5]
+
+for (let i = 0; i < clubs.length; i++) {
+  const naam = clubs[i].naam;
+  const telefoonnummer = clubs[i].contactInformatie.telefoonNummer
+  const contactpersoon = clubs[i].contactInformatie.contactPersoon
+
+    // console.log(naam)
+    // console.log(telefoonnummer)
+    // console.log(contactpersoon)
+
+    console.log(
+      'Wilt u meer informatie over de club ' +
+        naam +
+        ' dan kunt u gerust contact opnemen met ' +
+        contactpersoon +
+        ' via het telefoonnummer ' +
+        telefoonnummer +
+        '.'
+    )
+}; 
+
