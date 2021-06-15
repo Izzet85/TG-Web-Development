@@ -1,0 +1,56 @@
+.carousel-container {
+  max-width: 500px;
+
+  top: 100px;
+  position: relative;
+  margin: auto;
+}
+
+img {
+  border-radius: 25px 25px 25px 25px;
+  overflow: hidden;
+
+}
+
+.slides {
+  /* display: none; */
+  position: absolute;
+
+}
+
+.slides .img {
+  /* display: block; */
+  width: 100%;
+   
+
+}
+
+.prev {
+  cursor: pointer;
+  position: absolute;
+  font-weight: bold;
+  display: block;
+  color: black;
+  margin-left: 10px;
+
+  top: 150px;
+}
+
+.prev:hover {
+  background-color: black;
+  opacity: 0.5;
+}
+
+.next {
+  cursor: pointer;
+  position: absolute;
+  width: auto;
+  font-weight: bold;
+  display: block;
+  margin-right: 10px;
+  color: black;
+
+  top: 150px;
+
+  right: 0;
+}
