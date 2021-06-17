@@ -58,7 +58,7 @@ function timerCycle() {
 
     timer.innerHTML = hr + ':' + min + ':' + sec
 
-    setTimeout('timerCycle()', 500)
+    setTimeout('timerCycle()', 5)
   }
 }
 // reset functie is gekoppeld aan de reset knop via de onclick methode
