@@ -1,10 +1,12 @@
 // import van het div element om het later te kunnen bewerken.
 const timer = document.getElementById('stopwatch')
-
+// declaratie van de uren,minuten en seconden variabelen die alle 3 een '0' waarde krijgen
 let hr = 0
 let min = 0
 let sec = 0
 let stoptime = true
+
+// start functie die gekoppeld is aan de start button via de onclick property
 
 function startTimer() {
   if (stoptime == true) {
@@ -12,14 +14,20 @@ function startTimer() {
     timerCycle()
   }
 }
+
+// stop functie die gekoppeld is aan de stop button via de onclick property
+
 function stopTimer() {
   if (stoptime == false) {
     stoptime = true
   }
 }
 
+// De timerCycle zorgt voor de weergave van de timer
+
 function timerCycle() {
   if (stoptime == false) {
+    // de parseInt functie zorgt ervoor dat de string waarde geconverteerd word naar een int waarde
     sec = parseInt(sec)
     min = parseInt(min)
     hr = parseInt(hr)
@@ -48,10 +56,10 @@ function timerCycle() {
 
     timer.innerHTML = hr + ':' + min + ':' + sec
 
-    setTimeout('timerCycle()', 1000)
+    setTimeout('timerCycle()', 500)
   }
 }
-
+// reset functie is gekoppeld aan de reset knop via de onclick methode
 function resetTimer() {
   timer.innerHTML = '00:00:00'
 }
