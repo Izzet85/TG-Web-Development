@@ -4,6 +4,8 @@ const timer = document.getElementById('stopwatch')
 let hr = 0
 let min = 0
 let sec = 0
+
+//  variabele met boolean waarde die bijhoudt of de stopwatch loopt of niet
 let stoptime = true
 
 // start functie die gekoppeld is aan de start button via de onclick property
