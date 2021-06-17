@@ -9,20 +9,31 @@
     <title>Document</title>
   </head>
   <body>
+   
     <div class="container">
       <div class="glowing-cirkel"></div>
       <div class="time">
         <div class="show-time">
           <h1 id="title-stopwatch">SKEMEI</h1>
 
-          <h1>00:00:00</h1>
-          <div class="stopwatch-buttons">
-            <button class="start"><h3>Start</h3></button>
-            <button class="pause"><h3>Pause</h3></button>
-            <button class="stop"><h3>Stop</h3></button>
+          <!-- stopwatch timer section -->
+
+          <div class="stopwatch-screen">
+            <h1 id="stopwatch">00:00:00</h1>
           </div>
+           <!-- end of stopwatch timer section -->
+
+
+          <!-- button section -->
+          <div class="stopwatch-buttons">
+            <button onclick="startTimer()" id="start"><h3>Start</h3></button>
+            <button onclick="stopTimer()" id="pause"><h3>Pause</h3></button>
+            <button onclick="resetTimer()" id="stop"> <h3>Stop</h3</button>
+          </div>
+          <!-- end button section -->
         </div>
       </div>
     </div>
+    <script type="text/javascript" src="stopwatch.js"></script>
   </body>
 </html>
