@@ -1,5 +1,67 @@
 @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+* {
+  font-family: 'Indie Flower', sans-serif;
+}
+#quiz-container {
+  width: 400px;
+  height: 600px;
+  margin-left: 200px;
+  background-color: cadetblue;
+  position: relative;
+}
+.mathProblemText {
+  margin-left: 100px;
+}
+
+.vraag {
+  position: absolute;
+  margin-left: 50px;
+  margin-top: 10px;
+  padding: 10px 90px 30px 90px;
+  border-radius: 10px;
+  background-color: white;
+}
+
+.antwoorden {
+  position: absolute;
+  margin-left: 90px;
+  margin-top: 10px;
+  list-style-type: none;
+}
+
+.antwoord {
+  background-color: white;
+  margin: 5px 5px 5px 0px;
+  border-radius: 30px;
+  padding: 15px 150px 15px 150px;
+  right: 0;
+  transform: translate(-120px, 100px);
+}
 
 .hide {
   display: none;
+}
+
+.goedAntwoord {
+  background-color: green;
+}
+
+.foutAntwoord {
+  background-color: red;
+}
+
+.vorigeButton {
+  position: absolute;
+  margin-right: 20px;
+
+  padding: 10px 20px 5px 10px;
+  transform: translate(130px, 430px);
+}
+.volgendeButton {
+  position: absolute;
+  margin-right: 20px;
+  margin-bottom: 30px;
+  padding: 10px 10px 5px 10px;
+
+  transform: translate(200px, 430px);
 }
