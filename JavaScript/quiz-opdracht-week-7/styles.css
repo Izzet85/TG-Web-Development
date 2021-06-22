@@ -16,7 +16,7 @@
 .vraag {
   position: absolute;
   margin-left: 50px;
-  margin-top: 10px;
+  margin-top: -10px;
   padding: 10px 90px 30px 90px;
   border-radius: 10px;
   background-color: white;
@@ -35,7 +35,7 @@
   border-radius: 30px;
   padding: 15px 150px 15px 150px;
   right: 0;
-  transform: translate(-120px, 100px);
+  transform: translate(-90px, 50px);
 }
 
 .hide {
@@ -55,7 +55,7 @@
   margin-right: 20px;
 
   padding: 10px 20px 5px 10px;
-  transform: translate(130px, 430px);
+  transform: translate(130px, 490px);
 }
 .volgendeButton {
   position: absolute;
@@ -63,5 +63,5 @@
   margin-bottom: 30px;
   padding: 10px 10px 5px 10px;
 
-  transform: translate(200px, 430px);
+  transform: translate(200px, 490px);
 }
