@@ -66,3 +66,8 @@
 
   transform: translate(200px, 490px);
 }
+
+.indexNumber {
+  transform: translate(385px, -610px);
+  font-size: large;
+}

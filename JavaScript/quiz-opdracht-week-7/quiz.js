@@ -53,17 +53,28 @@ div.append(volgendeButton)
 // volgendeButton.classList.add('volgendeBtn')
 volgendeButton.classList.add('volgendeButton')
 let questionNumber = 1
+let indexNumber = 1
 
 volgendeButton.onclick = function () {
   console.log(questionNumber)
   questionNumber++
+  indexNumber++
+
+  showIndexNumber(questionNumber)
   showQuestion()
+
+  // }
 }
 vorigeButton.onclick = function () {
-  console.log(questionNumber)
   questionNumber--
+  indexNumber--
+  showIndexNumber(questionNumber)
+
+  console.log(questionNumber)
   showQuestion()
 }
+
+// }
 // EINDE BUTTONS===============================================================
 
 // let vraag1Antwoorden = [
@@ -121,10 +132,12 @@ function showQuestion() {
         }
       }
       ul.classList.add('antwoorden')
-      div = ''
+      indexNumber === 1
 
       break
     case 2:
+      indexNumber++
+
       let vraag2Antwoorden
       var question2 = 'What is 500 -  150'
       vraagContainer.innerText = question2
@@ -278,10 +291,18 @@ function showQuestion() {
       }
       ul6.classList.add('antwoorden')
       break
-
-    default:
-      break
   }
+}
+let indexQuestion = document.createElement('p')
+indexQuestion.classList.add('indexNumber')
+
+function showIndexNumber(indexNumber) {
+  indexQuestion.innerText = '' + indexNumber + '/6'
+
+  console.log(indexQuestion.innerText)
+  document.body.append(indexQuestion)
+
+  console.log(indexNumber)
 }
 
 // manipulate elements
