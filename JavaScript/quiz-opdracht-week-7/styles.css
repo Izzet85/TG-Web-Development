@@ -50,6 +50,9 @@
 .foutAntwoord {
   background-color: red;
 }
+/* li .antwoord .button {
+  padding-left: 200px;
+} */
 
 .vorigeButton {
   position: absolute;

@@ -62,6 +62,7 @@ volgendeButton.onclick = function () {
 
   showIndexNumber(questionNumber)
   showQuestion()
+  checkAnswer()
 
   // }
 }
@@ -110,29 +111,29 @@ function showQuestion() {
 
       let ul = document.createElement('ul')
       div.appendChild(ul)
-      let vraag1Antwoorden = [
-        '1. ' + ' ' + '  170',
-        '2. ' + ' ' + '150',
-        '3.' + ' ' + ' 200',
-        '4. ' + ' ' + '250',
-        '5. ' + '   ' + ' 300',
-      ]
+      let vraag1Antwoorden = [170, 150, 200, 250, 300]
 
       for (let i = 0; i < 5; i++) {
         {
           let li = document.createElement('li')
           li.className = 'antwoord'
 
-          var a = document.createElement('a')
+          var a = document.createElement('button')
 
           a.innerHTML = vraag1Antwoorden[i]
+          // a.classList.add('antwoordVraag1-' + [i])
 
           li.appendChild(a)
           ul.appendChild(li)
         }
       }
+
       ul.classList.add('antwoorden')
-      indexNumber === 1
+      button.classList.add('antwoord1')
+      console.log(vraag1Antwoorden)
+      button.onclick = function checkAnswer() {
+        console.log('cliked on answer')
+      }
 
       break
     case 2:
@@ -144,20 +145,14 @@ function showQuestion() {
       // vraagContainer.innerText = question2
       let ul2 = document.createElement('ul')
       div.appendChild(ul2)
-      vraag2Antwoorden = [
-        '1. ' + ' ' + '  370',
-        '2. ' + ' ' + '510',
-        '3.' + ' ' + ' 220',
-        '4. ' + ' ' + '250',
-        '5. ' + '   ' + ' 350',
-      ]
+      vraag2Antwoorden = [370, 510, 220, 250, 350]
 
       for (let i = 0; i < 5; i++) {
         {
           let li = document.createElement('li')
           li.className = 'antwoord'
 
-          var a = document.createElement('a')
+          var a = document.createElement('button')
 
           a.innerHTML = vraag2Antwoorden[i]
 
@@ -167,6 +162,8 @@ function showQuestion() {
       }
       ul2.classList.add('antwoorden')
 
+      console.log(vraag2Antwoorden)
+
       break
     case 3:
       let vraag3Antwoorden
@@ -175,20 +172,15 @@ function showQuestion() {
       // vraagContainer.innerText = question2
       let ul3 = document.createElement('ul')
       div.appendChild(ul3)
-      vraag3Antwoorden = [
-        '1. ' + ' ' + '  170',
-        '2. ' + ' ' + '150',
-        '3.' + ' ' + ' 200',
-        '4. ' + ' ' + '240',
-        '5. ' + '   ' + ' 300',
-      ]
+      vraag3Antwoorden = [170, 150, 200, 240, 300]
 
       for (let i = 0; i < 5; i++) {
         {
           let li = document.createElement('li')
           li.className = 'antwoord'
 
-          var a = document.createElement('a')
+          var a = document.createElement('button')
+          a.classList.add('antwoorden-3' + [i])
 
           a.innerHTML = vraag3Antwoorden[i]
 
@@ -197,6 +189,7 @@ function showQuestion() {
         }
       }
       ul3.classList.add('antwoorden')
+      console.log(vraag3Antwoorden)
 
       break
     case 4:
@@ -206,20 +199,14 @@ function showQuestion() {
       // vraagContainer.innerText = question2
       let ul4 = document.createElement('ul')
       div.appendChild(ul4)
-      vraag4Antwoorden = [
-        '1. ' + ' ' + '  170',
-        '2. ' + ' ' + '650',
-        '3.' + ' ' + ' 400',
-        '4. ' + ' ' + '640',
-        '5. ' + '   ' + ' 570',
-      ]
+      vraag4Antwoorden = [170, 650, 400, 640, 570]
 
       for (let i = 0; i < 5; i++) {
         {
           let li = document.createElement('li')
           li.className = 'antwoord'
 
-          var a = document.createElement('a')
+          var a = document.createElement('button')
 
           a.innerHTML = vraag4Antwoorden[i]
 
@@ -228,6 +215,7 @@ function showQuestion() {
         }
       }
       ul4.classList.add('antwoorden')
+      console.log(vraag4Antwoorden)
 
       break
     case 5:
@@ -237,20 +225,14 @@ function showQuestion() {
       // vraagContainer.innerText = question2
       let ul5 = document.createElement('ul')
       div.appendChild(ul5)
-      vraag5Antwoorden = [
-        '1. ' + ' ' + '  270',
-        '2. ' + ' ' + '190',
-        '3.' + ' ' + ' 200',
-        '4. ' + ' ' + '220',
-        '5. ' + '   ' + ' 300',
-      ]
+      vraag5Antwoorden = [270, 190, 200, 220, 300]
 
       for (let i = 0; i < 5; i++) {
         {
           let li = document.createElement('li')
           li.className = 'antwoord'
 
-          var a = document.createElement('a')
+          var a = document.createElement('button')
 
           a.innerHTML = vraag5Antwoorden[i]
 
@@ -259,6 +241,7 @@ function showQuestion() {
         }
       }
       ul5.classList.add('antwoorden')
+      console.log(vraag5Antwoorden)
 
       break
     case 6:
@@ -268,20 +251,14 @@ function showQuestion() {
       // vraagContainer.innerText = question2
       let ul6 = document.createElement('ul')
       div.appendChild(ul6)
-      vraag6Antwoorden = [
-        '1. ' + ' ' + '  370',
-        '2. ' + ' ' + '350',
-        '3.' + ' ' + ' 400',
-        '4. ' + ' ' + '450',
-        '5. ' + '   ' + ' 530',
-      ]
+      vraag6Antwoorden = [370, 350, 400, 450, 530]
 
       for (let i = 0; i < 5; i++) {
         {
           let li = document.createElement('li')
           li.className = 'antwoord'
 
-          var a = document.createElement('a')
+          var a = document.createElement('button')
 
           a.innerHTML = vraag6Antwoorden[i]
 
@@ -305,6 +282,18 @@ function showIndexNumber(indexNumber) {
   console.log(indexNumber)
 }
 
+function checkAnswer() {
+  console.log('antwoord clicked')
+}
+
+// console.log(vraag1Antwoorden)
+// console.log(vraag2Antwoorden)
+// console.log(vraag3Antwoorden)
+
+// console.log(vraag4Antwoorden)
+
+// console.log(vraag5Antwoorden)
+
 // manipulate elements
 
 // styling elements via addClasses
@@ -312,3 +301,14 @@ function showIndexNumber(indexNumber) {
 // 'element.classList.add("my-class");'
 
 // element.classList.remove('my-class')
+
+window.onload = function () {
+  var button = document.getElementsByTagName('button')
+  for (var i = 0; i < anchors.length; i++) {
+    var button = anchors[i]
+    button.onclick = function () {
+      alert('ho ho ho')
+    }
+  }
+}
+console.log(button)
