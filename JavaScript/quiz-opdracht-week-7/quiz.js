@@ -62,7 +62,6 @@ volgendeButton.onclick = function () {
 
   showIndexNumber(questionNumber)
   showQuestion()
-  checkAnswer()
 
   // }
 }
@@ -121,7 +120,9 @@ function showQuestion() {
           var a = document.createElement('button')
 
           a.innerHTML = vraag1Antwoorden[i]
-          // a.classList.add('antwoordVraag1-' + [i])
+          a.classList.add('antwoordVraag1-')
+
+          a.setAttribute('onclick', 'checkAnswer()')
 
           li.appendChild(a)
           ul.appendChild(li)
@@ -129,11 +130,10 @@ function showQuestion() {
       }
 
       ul.classList.add('antwoorden')
-      button.classList.add('antwoord1')
+      // button.classList.add('antwoord1')
       console.log(vraag1Antwoorden)
-      button.onclick = function checkAnswer() {
-        console.log('cliked on answer')
-      }
+      button.onclick = function checkAnswer() {}
+      checkAnswer()
 
       break
     case 2:
@@ -163,8 +163,10 @@ function showQuestion() {
       ul2.classList.add('antwoorden')
 
       console.log(vraag2Antwoorden)
+      checkAnswer(vraag2Antwoorden)
 
       break
+
     case 3:
       let vraag3Antwoorden
       var question3 = 'What is 400 -160'
@@ -190,6 +192,8 @@ function showQuestion() {
       }
       ul3.classList.add('antwoorden')
       console.log(vraag3Antwoorden)
+
+      checkAnswer(vraag3Antwoorden)
 
       break
     case 4:
@@ -217,6 +221,8 @@ function showQuestion() {
       ul4.classList.add('antwoorden')
       console.log(vraag4Antwoorden)
 
+      checkAnswer(vraag4Antwoorden)
+
       break
     case 5:
       let vraag5Antwoorden
@@ -243,6 +249,8 @@ function showQuestion() {
       ul5.classList.add('antwoorden')
       console.log(vraag5Antwoorden)
 
+      checkAnswer(vraag5Antwoorden)
+
       break
     case 6:
       let vraag6Antwoorden
@@ -267,9 +275,14 @@ function showQuestion() {
         }
       }
       ul6.classList.add('antwoorden')
+
+      checkAnswer(vraag6Antwoorden)
+
       break
   }
 }
+
+// index questions function
 let indexQuestion = document.createElement('p')
 indexQuestion.classList.add('indexNumber')
 
@@ -281,34 +294,46 @@ function showIndexNumber(indexNumber) {
 
   console.log(indexNumber)
 }
+// end of index questions function
+
+// li.appendChild(a)
+// ul.appendChild(li)
+
+// window.onload = function () {
+//   for (var i = 0; i < button.length; i++) {
+//     var button = button[i]
+//     button.onclick = function () {
+//       console.log(button)
+//     }
+//   }
+// }
+// console.log(button)
+
+const answerButtons = document.querySelectorAll('antwoordVraag1-')
+
+// answerButtons.forEach()
+
+answerButtons.onclick = function () {
+  // Carry out a function here...
+  console.log(answerButtons)
+}
+
+console.log(answerButtons)
+
+// .setAttribute('onclick')
+// answerButtons.addEventListener('click', function () {
+//   console.log('clicked')
+// })
 
 function checkAnswer() {
-  console.log('antwoord clicked')
+  console.log('clicked')
+
+  console.log(arrayAntwoorden)
+  console.log(vraag)
 }
+// console.log(arrayAntwoorden)
+// console.log(vraag);
 
-// console.log(vraag1Antwoorden)
-// console.log(vraag2Antwoorden)
-// console.log(vraag3Antwoorden)
-
-// console.log(vraag4Antwoorden)
-
-// console.log(vraag5Antwoorden)
-
-// manipulate elements
-
-// styling elements via addClasses
-
-// 'element.classList.add("my-class");'
-
-// element.classList.remove('my-class')
-
-window.onload = function () {
-  var button = document.getElementsByTagName('button')
-  for (var i = 0; i < anchors.length; i++) {
-    var button = anchors[i]
-    button.onclick = function () {
-      alert('ho ho ho')
-    }
-  }
-}
-console.log(button)
+// answerButtons.onclick = function () {
+//   // Carry out a function here...
+//   console.log('clicked')
