@@ -122,7 +122,8 @@ function showQuestion() {
           a.innerHTML = vraag1Antwoorden[i]
           a.classList.add('antwoordVraag1-')
 
-          a.setAttribute('onclick', 'checkAnswer()')
+          a.setAttribute('onclick', 'checkAnswer(this)')
+          a.setAttribute('data-tip', vraag1Antwoorden[i])
 
           li.appendChild(a)
           ul.appendChild(li)
@@ -133,7 +134,7 @@ function showQuestion() {
       // button.classList.add('antwoord1')
       console.log(vraag1Antwoorden)
       button.onclick = function checkAnswer() {}
-      checkAnswer()
+      checkAnswer(vraag1Antwoorden, question)
 
       break
     case 2:
@@ -155,6 +156,10 @@ function showQuestion() {
           var a = document.createElement('button')
 
           a.innerHTML = vraag2Antwoorden[i]
+          a.classList.add('antwoordVraag2-')
+
+          a.setAttribute('onclick', 'checkAnswer(this)')
+          a.setAttribute('data-tip', vraag2Antwoorden[i])
 
           li.appendChild(a)
           ul2.appendChild(li)
@@ -185,6 +190,10 @@ function showQuestion() {
           a.classList.add('antwoorden-3' + [i])
 
           a.innerHTML = vraag3Antwoorden[i]
+          a.classList.add('antwoordVraag3-')
+
+          a.setAttribute('onclick', 'checkAnswer(this)')
+          a.setAttribute('data-tip', vraag3Antwoorden[i])
 
           li.appendChild(a)
           ul3.appendChild(li)
@@ -213,6 +222,10 @@ function showQuestion() {
           var a = document.createElement('button')
 
           a.innerHTML = vraag4Antwoorden[i]
+          a.classList.add('antwoordVraag4-')
+
+          a.setAttribute('onclick', 'checkAnswer(this)')
+          a.setAttribute('data-tip', vraag4Antwoorden[i])
 
           li.appendChild(a)
           ul4.appendChild(li)
@@ -231,7 +244,7 @@ function showQuestion() {
       // vraagContainer.innerText = question2
       let ul5 = document.createElement('ul')
       div.appendChild(ul5)
-      vraag5Antwoorden = [270, 190, 200, 220, 300]
+      vraag5Antwoorden = [270, 190, 220, 200, 300]
 
       for (let i = 0; i < 5; i++) {
         {
@@ -241,6 +254,10 @@ function showQuestion() {
           var a = document.createElement('button')
 
           a.innerHTML = vraag5Antwoorden[i]
+          a.classList.add('antwoordVraag5-')
+
+          a.setAttribute('onclick', 'checkAnswer(this)')
+          a.setAttribute('data-tip', vraag5Antwoorden[i])
 
           li.appendChild(a)
           ul5.appendChild(li)
@@ -269,6 +286,10 @@ function showQuestion() {
           var a = document.createElement('button')
 
           a.innerHTML = vraag6Antwoorden[i]
+          a.classList.add('antwoordVraag6-')
+
+          a.setAttribute('onclick', 'checkAnswer(this)')
+          a.setAttribute('data-tip', vraag6Antwoorden[i])
 
           li.appendChild(a)
           ul6.appendChild(li)
@@ -325,15 +346,40 @@ console.log(answerButtons)
 //   console.log('clicked')
 // })
 
-function checkAnswer() {
-  console.log('clicked')
+function checkAnswer(button, question) {
+  let vraag1Antwoorden = Array.from(
+    document.querySelectorAll('.antwoordVraag1-')
+  )
+  let vraag2Antwoorden = Array.from(
+    document.querySelectorAll('.antwoordVraag2-')
+  )
 
-  console.log(arrayAntwoorden)
-  console.log(vraag)
+  let antwoordenVraag1 = Array.from(vraag1Antwoorden)
+  let antwoordenVraag2 = Array.from(vraag2Antwoorden)
+  let antwoordenVraag3 = Array.from(vraag3Antwoorden)
+  let antwoordenVraag4 = Array.from(vraag4Antwoorden)
+  let antwoordenVraag5 = Array.from(vraag5Antwoorden)
+  let antwoordenVraag6 = Array.from(vraag6Antwoorden)
+
+  // var vraag = question
+
+  var antwoord = button.getAttribute('data-tip')
+  // console.log(antwoord)
+  // console.log(vraag1Antwoorden)
+
+  if (antwoord === antwoordenVraag1[0].innerHTML) {
+    console.log('right answer')
+    // console.log(antwoord)
+    // console.log(antwoordenVraag1[0].innerHTML)
+  } else if (antwoord === antwoordenVraag2[4].innerHTML) {
+    console.log('rightanswer')
+  } else if (antwoord === antwoordenVraag3[3].innerHTML) {
+    console.log('rightanswer')
+  } else if (antwoord === antwoordenVraag4[3].innerHTML) {
+    console.log('rightanswer')
+  } else if (antwoord === antwoordenVraag5[2].innerHTML) {
+    console.log('rightanswer')
+  } else if (antwoord === antwoordenVraag6[4].innerHTML) {
+    console.log('rightanswer')
+  }
 }
-// console.log(arrayAntwoorden)
-// console.log(vraag);
-
-// answerButtons.onclick = function () {
-//   // Carry out a function here...
-//   console.log('clicked')
