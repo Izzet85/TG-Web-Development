@@ -353,6 +353,18 @@ function checkAnswer(button, question) {
   let vraag2Antwoorden = Array.from(
     document.querySelectorAll('.antwoordVraag2-')
   )
+  let vraag3Antwoorden = Array.from(
+    document.querySelectorAll('.antwoordVraag3-')
+  )
+  let vraag4Antwoorden = Array.from(
+    document.querySelectorAll('.antwoordVraag4-')
+  )
+  let vraag5Antwoorden = Array.from(
+    document.querySelectorAll('.antwoordVraag5-')
+  )
+  let vraag6Antwoorden = Array.from(
+    document.querySelectorAll('.antwoordVraag6-')
+  )
 
   let antwoordenVraag1 = Array.from(vraag1Antwoorden)
   let antwoordenVraag2 = Array.from(vraag2Antwoorden)
@@ -367,19 +379,74 @@ function checkAnswer(button, question) {
   // console.log(antwoord)
   // console.log(vraag1Antwoorden)
 
-  if (antwoord === antwoordenVraag1[0].innerHTML) {
+  let antwoord1 = antwoord === antwoordenVraag1[0].innerHTML
+
+  if (antwoord1) {
     console.log('right answer')
+    antwoordenVraag1[0].classList.add('goedAntwoord')
     // console.log(antwoord)
     // console.log(antwoordenVraag1[0].innerHTML)
-  } else if (antwoord === antwoordenVraag2[4].innerHTML) {
+  } else if (
+    antwoord === antwoordenVraag1[1].innerHTML ||
+    antwoord === antwoordenVraag1[2].innerHTML ||
+    antwoord === antwoordenVraag1[3].innerHTML ||
+    antwoord === antwoordenVraag1[4].innerHTML
+  ) {
+    console.log('wrong answer')
+    button.classList.add('foutAntwoord')
+  }
+
+  let antwoord2 = antwoord === antwoordenVraag2[4].innerHTML
+  if (antwoord2) {
     console.log('rightanswer')
-  } else if (antwoord === antwoordenVraag3[3].innerHTML) {
+    antwoordenVraag2[4].classList.add('goedAntwoord')
+  } else if (
+    antwoord === antwoordenVraag2[0].innerHTML ||
+    antwoord === antwoordenVraag2[1].innerHTML ||
+    antwoord === antwoordenVraag2[2].innerHTML ||
+    antwoord === antwoordenVraag2[3].innerHTML
+  ) {
+    console.log('wrong answer')
+    button.classList.add('foutAntwoord')
+  }
+  let antwoord3 = antwoord === antwoordenVraag3[3].innerHTML
+  if (antwoord3) {
     console.log('rightanswer')
-  } else if (antwoord === antwoordenVraag4[3].innerHTML) {
+    antwoordenVraag3[3].classList.add('goedAntwoord')
+  } else if (
+    antwoord === antwoordenVraag3[0].innerHTML ||
+    antwoord === antwoordenVraag3[1].innerHTML ||
+    antwoord === antwoordenVraag3[2].innerHTML ||
+    antwoord === antwoordenVraag3[4].innerHTML
+  ) {
+    console.log('wrong answer')
+    button.classList.add('foutAntwoord')
+  }
+  let antwoord4 = antwoord === antwoordenVraag4[3].innerHTML
+
+  if (antwoord4) {
     console.log('rightanswer')
-  } else if (antwoord === antwoordenVraag5[2].innerHTML) {
+    antwoordenVraag4[3].classList.add('goedAntwoord')
+  } else if (
+    antwoord === antwoordenVraag4[0].innerHTML ||
+    antwoord === antwoordenVraag4[1].innerHTML ||
+    antwoord === antwoordenVraag4[2].innerHTML ||
+    antwoord === antwoordenVraag4[3].innerHTML
+  ) {
+    console.log('wrong answer')
+    button.classList.add('foutAntwoord')
+  }
+  let antwoord5 = antwoord === antwoordenVraag5[2].innerHTML
+  if (antwoord5) {
     console.log('rightanswer')
-  } else if (antwoord === antwoordenVraag6[4].innerHTML) {
-    console.log('rightanswer')
+    antwoordenVraag5[2].classList.add('goedAntwoord')
+  } else if (
+    antwoord === antwoordenVraag5[0].innerHTML ||
+    antwoord === antwoordenVraag5[1].innerHTML ||
+    antwoord === antwoordenVraag5[3].innerHTML ||
+    antwoord === antwoordenVraag5[4].innerHTML
+  ) {
+    console.log('wrong answer')
+    antwoordenVraag6[4].classList.add('foutAntwoord')
   }
 }

@@ -74,3 +74,9 @@
   transform: translate(385px, -610px);
   font-size: large;
 }
+.goedAntwoord {
+  background-color: green;
+}
+.foutAntwoord{
+  background-color: red;
+}
