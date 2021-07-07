@@ -1,6 +1,7 @@
 package com.company;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Main {
 
@@ -126,6 +127,29 @@ public class Main {
             System.out.println("animals name is: " + object.name + " his age is " + object.age+" his year of birth is " + object.yearOfBirth + " the lastday he feeded is "+object.lastDayOfFeeding + " day ago");
 
         }
+
+        Scanner input = new Scanner(System.in);
+        System.out.println("Please enter Name : ");
+        String name = input.nextLine();
+        System.out.println("Please enter age : ");
+        int age = input.nextInt();
+        System.out.println("Please enter year of birth : ");
+        int yearOfBirth = input.nextInt();
+        System.out.println("Please enter year of birth : ");
+        int lastDayOfFeeding = input.nextInt();
+//
+
+//        Animal objectt = new Animal();
+        Animal object = new Animal(name, age, yearOfBirth, lastDayOfFeeding);
+
+        listOfAnimals.add(object);
+
+        for (Animal newObject: listOfAnimals){
+            System.out.println("animals name is: " + object.name + " his age is " + object.age+" his year of birth is " + object.yearOfBirth + " the lastday he feeded is "+object.lastDayOfFeeding + " day ago");
+
+        }
+
+
 
 
 
