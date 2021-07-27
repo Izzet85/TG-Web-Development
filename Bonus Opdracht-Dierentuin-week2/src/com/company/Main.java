@@ -135,7 +135,7 @@ public class Main {
         int age = input.nextInt();
         System.out.println("Please enter year of birth : ");
         int yearOfBirth = input.nextInt();
-        System.out.println("Please enter year of birth : ");
+        System.out.println("Please enter last day of feeding : ");
         int lastDayOfFeeding = input.nextInt();
 //
 

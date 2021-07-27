@@ -4,6 +4,8 @@ package com.company;
 class Animal {
     String name;
     int age;
+    boolean animalIsFeeded;
+    boolean animalWasAtDoctor;
     public static String type = "Animal";
 
     public Animal(String name,int age){
@@ -26,7 +28,7 @@ class Animal {
 
 class Bear extends Animal{
 
-    public Bear(String name, int age,int weight) {
+    public Bear(String type,String name, int age,int weight) {
         super(name, age);
 
     }
@@ -69,9 +71,9 @@ public class Main {
 	// write your code here
         Animal animal1 = new Animal("Beer",12);
         System.out.println("Name of animal1 is " +  animal1.name + " and his age is " + animal1.age);
-        Bear bear1 = new Bear("Brown Bear",5,50);
+        Bear bear1 = new Bear("Brown Bear","teddy",5,20);
         System.out.println("bear1 object heet " + bear1.name + "en hij is pas " + bear1.age + " oud"  );
-        Bear bear2 = new Bear("Polar Bear",3,60);
+        Bear bear2 = new Bear("Polar bear","Ted",4,3);
         System.out.println("bear2 object heet " + bear2.name + "en hij is pas " + bear2.age + " oud en weegt " + bear2  );
         bear1.showType();
         Animal animal2 = new Animal("ijsbeer",10);
@@ -89,7 +91,7 @@ public class Main {
         System.out.println(  "The second bear in the array is " + animal[2].age  + " old and his name is " + animal[2].name );
 
 
-        Animal[] bearArray = new Animal[2];
+        Bear[] bearArray = new Bear[2];
 
         bearArray[0] = bear1;
         bearArray[1] = bear2;
@@ -104,7 +106,7 @@ public class Main {
 
         }
 
-        for (Animal bearData:bearArray ){
+        for (Bear bearData:bearArray ){
             bearData.feed();
 
 
